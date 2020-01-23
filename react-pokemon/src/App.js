@@ -34,12 +34,14 @@ const App = () => {
     <div className="App">
       <div className="pokemon-container">
         {pokemonList && pokemonList.map((pokemon, index) => {
-          console.log('pokemon2 ', pokemon)
+          console.log('pokemon mapped ', pokemon)
           let stringLink = `/pokemon/${index + 1}`
           return (
             <>
-              <Link to={stringLink}>
-                <div className="pokemon">{pokemon.name}</div>
+              <Link style={{"text-decoration": "none"}} to={stringLink}>
+                <div className="pokemon">
+                  {pokemon.name}      
+                  </div>
               </Link>
             </>
           )
