@@ -38,7 +38,7 @@ const App = () => {
           let stringLink = `/pokemon/${index + 1}`
           return (
             <>
-              <Link style={{"text-decoration": "none"}} to={stringLink}>
+              <Link style={{"textDecoration": "none"}} to={stringLink} >
                 <div className="pokemon">
                   {pokemon.name}      
                   </div>
