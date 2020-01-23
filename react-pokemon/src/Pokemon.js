@@ -8,6 +8,9 @@ const Pokemon = ({ match }) => {
 
     console.log('match:', match);
     console.log('match.params.id:', match.params.id);
+    // hint:
+    // combine: https://pokeapi.co/api/v2/pokemon/ + match.params.id
+
     const [name, setName] = useState('');
     const [picture, setPicture] = useState('');
 
@@ -32,18 +35,20 @@ const Pokemon = ({ match }) => {
 
     return (
         <>
+        <div className="pokemon-id-container">
             <div className="pokemonID">
                 {/* {match.params.id} */}
                 <div className="name">
                     {name}
                 </div>
-                <img src={picture} alt={name} />
+                <img className="pokemonIDimage" src={picture} alt={name} />
             </div>
-            <div>
+            <div className="goBackLink">
                 <Link to="/" className="nav-link">
                     home
-            </Link>
+                 </Link>
             </div>
+        </div>
         </>
     );
 }

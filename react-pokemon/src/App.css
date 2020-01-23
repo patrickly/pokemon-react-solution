@@ -20,3 +20,35 @@
 .pokemon:hover { 
   color: #2CBB2D;
 }
+
+.pokemon-id-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.pokemonID {
+  font-size: 2rem;
+  /* background: red; */
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemonIDimage {
+  height :200px;
+}
+.goBackLink{
+  display: block;
+}
+
+.goBackLink .nav-link{
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
