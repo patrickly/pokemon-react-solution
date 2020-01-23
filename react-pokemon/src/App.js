@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import './App.css';
 
@@ -33,9 +34,13 @@ const App = () => {
     <div className="App">
       <div className="pokemon-container">
         {pokemonList && pokemonList.map((pokemon, index) => {
+          console.log('pokemon2 ', pokemon)
+          let stringLink = `/pokemon/${index + 1}`
           return (
             <>
-              <div className="pokemon">{pokemon.name}</div>
+              <Link to={stringLink}>
+                <div className="pokemon">{pokemon.name}</div>
+              </Link>
             </>
           )
         })}
