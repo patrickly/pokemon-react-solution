@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import './App.css';
 
@@ -14,7 +15,7 @@ const Pokemon = ({match}) => {
     async function fetchData() {
         const pokemon =  await axios ({
           method: 'GET',
-          url: 'https://pokeapi.co/api/v2/pokemon/2',
+          url: `https://pokeapi.co/api/v2/pokemon/${match.params.id}`,
         });
         console.log('33pokemon', pokemon)
         console.log('33pokemon.data', pokemon.data)
@@ -30,11 +31,20 @@ const Pokemon = ({match}) => {
   }, [])
 
   return (
+    <>
     <div className="pokemonID">
         {/* {match.params.id} */}
-        {name}
-        {picture}
+        <div className="name">
+            {name}
+        </div>
+        <img src= {picture} alt={name}/>
     </div>
+    <div>
+             <Link to="/" className="nav-link">
+                                    home
+            </Link>
+    </div>
+    </>
   );
 }
 
