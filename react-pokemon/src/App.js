@@ -31,8 +31,13 @@ const App = () => {
 
   return (
     <div className="App">
-      {pokemonList && pokemonList.length}
-      df
+      {pokemonList && pokemonList.map((pokemon, index) => {
+        return (
+          <>
+          <div>{pokemon.name}</div>
+          </>
+        )
+      })}
     </div>
   );
 }
