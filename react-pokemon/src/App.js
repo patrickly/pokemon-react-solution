@@ -31,13 +31,15 @@ const App = () => {
 
   return (
     <div className="App">
-      {pokemonList && pokemonList.map((pokemon, index) => {
-        return (
-          <>
-          <div>{pokemon.name}</div>
-          </>
-        )
-      })}
+      <div className="pokemon-container">
+        {pokemonList && pokemonList.map((pokemon, index) => {
+          return (
+            <>
+              <div className="pokemon">{pokemon.name}</div>
+            </>
+          )
+        })}
+      </div>
     </div>
   );
 }
